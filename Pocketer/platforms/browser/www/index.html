@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+       <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+       <!-- Comentada para poder usar olsen -->
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <!-- OLSENUI -->
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <title>Hello World</title>
+    </head>
+    <body>
+      <!-- Header -->
+      <!-- Prerequisite=This example use ionicons(http://ionicons.com) to display icons. -->
+      <header>
+          <div class="toolbar">
+            <div class="toolbar__left">
+              <span class="toolbar-button toolbar-button--outline">
+                <i class="ion-navicon" style="font-size:32px; vertical-align:-6px;"></i>
+              </span>
+            </div>
+          
+            <div class="toolbar__center">
+              POKETER!
+            </div>
+          
+            <div class="toolbar__right">
+              <span class="toolbar-button toolbar-button--outline"> New  </span>
+            </div>
+          </div>
+      </header>
+      <main>
+          <template id="page1.html">
+            <ons-page>
+              <ons-toolbar>
+                <div class="left">
+                  <ons-toolbar-button onclick="prev()">
+                    <ons-icon icon="md-chevron-left"></ons-icon>
+                  </ons-toolbar-button>
+                </div>
+                <div class="center">Carousel</div>
+                <div class="right">
+                  <ons-toolbar-button onclick="next()">
+                    <ons-icon icon="md-chevron-right"></ons-icon>
+                  </ons-toolbar-button>
+                </div>
+              </ons-toolbar>
+            
+              <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+                <ons-carousel-item style="background-color: #330033;">
+                  <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+                    <div style="height: 200px; padding: 1px 0 0 0;">
+                      <div class="card">
+                        <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                        <button class="button button--light"> Add Stuff </button>
+                      </div>
+                    </div>
+                    <button class="button button--light" style="background-color:white;"> Nueva Nota </button>
+    
+                  </div>
+                </ons-carousel-item>
+                <ons-carousel-item style="background-color: #003300;">
+                  <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+                    <button class="button button--light" style="background-color:white;"> Foto </button>
+                        <div class="card">
+                          <div class="card__content"> 
+                            <img style="width:100%;" src="https://i.pinimg.com/originals/5b/58/b7/5b58b78229665caa2300a9eeb0b05bae.jpg"></img>
+                          </div>
+                          
+                        </div>
+                  </div>
+                </ons-carousel-item>
+                <ons-carousel-item style="background-color: #D38312;">
+                  <div style="text-align: center; font-size: 30px; margin-top: 20px; color: #fff;">
+                    <h1> PELIS </h1>
+                    <button class="button button--light" style="background-color:white;"> Añadir </button>
+    
+                  </div>
+                </ons-carousel-item>
+              </ons-carousel>
+            </ons-page>
+          </template>
+ <!--         <template id="page2.html">
+            <ons-page>
+  <ons-toolbar>
+    <div class="center">Card</div>
+  </ons-toolbar>
+
+  <ons-card>
+    <img src="https://monaca.io/img/logos/download_image_onsenui_01.png" alt="Onsen UI" style="width: 100%">
+    <div class="title">
+      Awesome framework
+    </div>
+    <div class="content">
+      <ons-list>
+        <ons-list-header> ¿Quieres guardar la localización de la foto? 
+                                                
+        </ons-list-header>
+        <ons-list-item></ons-list-item>
+        <ons-list-item></ons-list-item>
+        <ons-list-item></ons-list-item>
+      </ons-list>
+    </div>
+  </ons-card>
+</ons-page>
+            
+            
+          </template>
+          -->
+
+          
+      </main>
+       
+        
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
