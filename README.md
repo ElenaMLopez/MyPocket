@@ -1,7 +1,7 @@
 # MyPocket
 App to store sturff
 
-####Plugins:
+#### Plugins:
 
 cordova-plugin-geolocation
 cordova-plugin-media-capture
